@@ -5,8 +5,8 @@
 "             You may also use visual-block mode to select endpoints and
 "             draw lines, arrows, and ellipses.
 "
-" Date:			Nov 28, 2012
-" Maintainer:	Charles E. Campbell  <NdrOchipS@PcampbellAfamily.Mbiz>
+" Date:		Nov 28, 2012
+" Author:	Charles E Campbell <NcampObell@SdrPchip.AorgM-NOSPAM>
 " Copyright:    Copyright (C) 1999-2012 Charles E. Campbell {{{1
 "               Permission is hereby granted to use and distribute this code,
 "               with or without modifications, provided that this copyright
@@ -31,16 +31,16 @@
 if &cp || exists("g:loaded_DrawItPlugin")
  finish
 endif
-let g:loaded_DrawItPlugin = "v13"
+let g:loaded_DrawItPlugin = "v14"
 let s:keepcpo             = &cpo
 set cpo&vim
 
 " ---------------------------------------------------------------------
 " Public Interface: {{{1
 " commands:
-com! -nargs=0 -bang DrawIt   set lz|if <bang>0|call DrawIt#DrawItStop()|else|call DrawIt#DrawItStart()|endif|set nolz
-com! -nargs=?       DIstart  set lz|call DrawIt#DrawItStart(<q-args>)|set nolz
-com! -nargs=0       DIstop   set lz|call DrawIt#DrawItStop()|set nolz
+com! -nargs=0 -bang DrawIt   	set lz|if <bang>0|call DrawIt#DrawItStop()|else|call DrawIt#DrawItStart()|endif|set nolz
+com! -nargs=?       DIstart  	set lz|call DrawIt#DrawItStart(<q-args>)|set nolz
+com! -nargs=0       DIstop   	set lz|call DrawIt#DrawItStop()|set nolz
 
 " commands: available only when not pre-defined
 sil! com -nargs=0 DInrml call DrawIt#SetMode('N')
